@@ -1,5 +1,4 @@
 def call(){
-  stage('SonarQube analysis') {
             environment {
             scannerHome = tool 'sonar'
             }
@@ -8,5 +7,4 @@ def call(){
             sh "${scannerHome}/bin/sonar-scanner"
     }
   }
-    }
 }
