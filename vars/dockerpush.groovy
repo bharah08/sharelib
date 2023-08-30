@@ -1,14 +1,10 @@
 def call(){
 
-
-            steps{
-script {
               docker.withRegistry( '', registryCredential ) {
+                sh "          
                 dockerImage.push("$BUILD_NUMBER")
+                "          
               }
-            }
-            }
-
 
 
 }
