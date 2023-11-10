@@ -1,7 +1,7 @@
 def call(){
 
              docker.withRegistry( '', registryCredential ) {
-                dockerImage.push("$BUILD_NUMBER") 
+                sh 'docker push $registry:$BUILD_NUMBER'
               }
 
 
